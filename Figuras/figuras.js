@@ -1,37 +1,19 @@
 // CODIGO TRIANGULO
 
 console.group("Triangulo")
-
-// const base = 4
-// const side1 = 6
-// const side2 = 6
-// const heigth = 5.5
-
-// const perimeterT = base + side1 + side2
-// const areaTriangulo = (base * heigth) / 2
 const perimeterT = (base, side1, side2) => base + side1 + side2
 const areaTriangulo = (base, heigth) => (base * heigth) / 2
-
-// console.log(`Los lados del triangulo miden: ${base}cm, ${side1}cm y ${side2}cm`)
-// console.log(`La altura del triangulo es de ${heigth}`)
-// console.log(`El perimetro del triangulo es: ${perimeterT}`)
-// console.log(`El area del triangulo es: ${areaTriangulo} cm2`)
-
 console.groupEnd()
+
+
+
+
 
 // CODIGO CUADRADO
 
 console.group("Cuadrado")
 
-// const sideSquare = 5
-// console.log(`Los lados del cuadrado miden ${sideSquare}cm`)
-
-// const perimeterSquare = sideSquare * 4
-// console.log(`El perimetro del cuadrado es ${perimeterSquare}cm`)
 const perimeterSquare = (sideSquare) => sideSquare * 4 
-
-// const areaSquare = sideSquare * sideSquare
-// console.log(`El area del cuadrado es: ${areaSquare}cm2 `)
 const areaSquare = (sideSquare) => sideSquare * sideSquare
 
 console.groupEnd()
@@ -56,3 +38,27 @@ const areaCircule = (ratio) => { Math.PI * (ratio * ratio) }
 
 
 console.groupEnd
+
+// ---------------------------------------------------------------------------------------
+
+// Funciones Del Cuadrado
+
+function calcularPerimetro() {
+    const input = document.getElementById("ladoCuadrado").value
+    const perimeter = perimeterSquare(input)
+    return perimeter
+}
+
+function calcularArea() {
+    const input = document.getElementById("ladoCuadrado").value
+    const area = areaSquare(input)
+    alert(`El area del cuadrado es ${area}`)
+    return area
+}
+
+// Fin funciones del cuadrado
+
+
+
+// Funciones del triangulo 
+

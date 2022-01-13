@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Figuras Geometricas | Curso Practico</title>
 </head>
 <body>
-    <h1>Figuras Geometricas</h1>
+    <head>
+        <h1>Figuras Geometricas</h1>     
+        <p>Taller practico para calcular arear y perimetros de figuras Geometricas con HTML Y JS</p>   
+    </head>
+    <section>
+        <h2>Calcule el perimetro y área de un cuadrado</h2>
+        <form>
+            <label for="ladoCuadrado">Ingrese el lado del cuadrado</label>
+            <input
+                placeholder="Lado del cuadrado"
+                id="ladoCuadrado"
+                type="number"
+            />
+            <button type="button" onclick="calcularPerimetro()">Calcular Perimetro!</button>
+            <button type="button" onclick="calcularArea()">Calcular Area!</button>
+        </form>
+    </section>
     <script src="./figuras.js"></script>
 </body>
 </html>
