@@ -13,7 +13,8 @@
         <p>Taller practico para calcular arear y perimetros de figuras Geometricas con HTML Y JS</p>   
     </head>
     <section>
-        <h2>Calcule el perimetro y área de un cuadrado</h2>
+        <h2>Calcule el área y perimetro de un cuadrado</h2>
+        <img src="../Assets/Cuadrado.svg" alt="cuadrado">
         <form>
             <label for="ladoCuadrado">Ingrese el lado del cuadrado</label>
             <input
@@ -25,6 +26,50 @@
             <button type="button" onclick="calcularArea()">Calcular Area!</button>
         </form>
     </section>
+    <hr/>
+    <section>
+        <h2>Calcule el área y perimetro del triangulo</h2>
+        <img src="../Assets/Triangulo.svg" alt="triangulo">
+        <form>
+            <label for="ladoA">Ingrese el lado A</label>
+            <input
+                placeholder="Lado A"
+                type="number"
+                id="ladoA"
+            />
+            <label for="ladoB">Ingrese el lado B</label>
+            <input
+                placeholder="Lado B"
+                type="number"
+                id="ladoB"
+            />
+            <label for="ladoC">Ingrese el lado C</label>
+            <input
+                placeholder="Lado C"
+                type="number"
+                id="ladoC"
+            />        
+            <button type="button" onclick="trianguloArea()">Get Area!</button>          
+            <button type="button" onclick="trianguloPerimetro()">Get Perimetro!</button>          
+        </form>   
+    </section>
+    <hr/>
+    <section>
+        <h2>Calcule área y perimetro de un circulo</h2>
+        <img src="../Assets/Circulo.svg" alt="">
+        <form>
+            <label for="radioCirculo">
+                Ingrese el radio del circulo
+            </label>
+            <input
+                placeholder="Radio circuferencia"
+                id="radioCirculo"
+                type="number"
+            />
+            <button type="button" onclick="areaCirculo()">Calcular Area!</button>
+        </form>
+    </section>
+    <hr>
     <script src="./figuras.js"></script>
 </body>
 </html>

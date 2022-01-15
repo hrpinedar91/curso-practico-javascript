@@ -1,43 +1,40 @@
 // CODIGO TRIANGULO
+const perimetroTriangulo = (b, l1, l2) => b + l1 + l2
 
-console.group("Triangulo")
-const perimeterT = (base, side1, side2) => base + side1 + side2
-const areaTriangulo = (base, heigth) => (base * heigth) / 2
-console.groupEnd()
+const areaTriangulo = (l1, b, l2 ) => {   
+    const perimetro = perimetroTriangulo(l1, b, l2)
+    const semiPerimetro = perimetro / 2
+    const area = Math.sqrt(semiPerimetro * (semiPerimetro - l1) * (semiPerimetro - b) * (semiPerimetro - l2))
+    return area
+}
 
+function trianguloArea() {
+    const ladoA = document.querySelector("#ladoA").value
+    const ladoB = document.querySelector("#ladoB").value
+    const ladoC = document.querySelector("#ladoC").value
+    const area = areaTriangulo(Number(ladoA), Number(ladoB), Number(ladoC))
+    return area   
+}
 
+function trianguloPerimetro () {
+    const ladoA = document.querySelector("#ladoA").value
+    const ladoB = document.querySelector("#ladoB").value
+    const ladoC = document.querySelector("#ladoC").value
+    const perimetro = perimetroTriangulo(Number(ladoA), Number(ladoB), Number(ladoC))
+    return perimetro;
+}
 
-
+// FIN CODIGO TRIANGULO 
 
 // CODIGO CUADRADO
-
-console.group("Cuadrado")
-
 const perimeterSquare = (sideSquare) => sideSquare * 4 
 const areaSquare = (sideSquare) => sideSquare * sideSquare
 
-console.groupEnd()
 
 // CIRCULOS 
-
-console.group("Circulo")
-
-// const ratio = 10
-// const diameter = ratio * 2
 const diameter = (ratio) => ratio * 2
-// const PI = Math.PI
-
-// const perimeterCircule = diameter * PI
 const perimeterCircule = (diameter) => diameter * Math.PI
-
-// const areaCircule = PI * (ratio * ratio)
-const areaCircule = (ratio) => { Math.PI * (ratio * ratio) }
-
-// console.log(`El perimetro del circulo es. ${perimeterCircule}cm`)
-// console.log(`El area del circulo es. ${areaCircule}cm`)
-
-
-console.groupEnd
+const areaCircule = (ratio) => ( Math.PI * (ratio * ratio) )
 
 // ---------------------------------------------------------------------------------------
 
@@ -56,9 +53,24 @@ function calcularArea() {
     return area
 }
 
-// Fin funciones del cuadrado
+
 
 
 
 // Funciones del triangulo 
 
+
+// Funciones Circulo 
+
+function areaCirculo() {
+    const radio = document.getElementById("radioCirculo").value
+    const diametro = diameter(radio)
+    const perimetro = perimeterCircule(diametro)
+    const area = areaCircule(radio)
+
+    console.group("Resultados Circulo")
+    console.log(`El perimetro del circulo es: ${perimetro}`)
+    console.log(`El area del circulo es: ${area}`)
+    console.log(`El diametro del ciruclo es: ${diametro}`)
+    console.groupEnd()
+}
