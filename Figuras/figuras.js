@@ -1,3 +1,43 @@
+// CODIGO CUADRADO
+const perimeterSquare = (sideSquare) => sideSquare * 4 
+const areaSquare = (sideSquare) => sideSquare * sideSquare
+
+function perimetroCuadrado() {
+    const input = document.getElementById("ladoCuadrado").value
+    const result = document.getElementById("result-square")
+    const perimeter = perimeterSquare(input)
+
+    // Se utiliza fragment para evitar reflow
+    const fragment = document.createDocumentFragment()
+    const p = document.createElement("p")
+    p.innerHTML += `<b>Perimeter: </b><span>${perimeter}</span>`
+
+    fragment.appendChild(p)
+    result.appendChild(fragment)
+
+    // return perimeter
+}
+
+function areaCuadrado() {
+    const input = document.getElementById("ladoCuadrado").value
+    const result = document.getElementById("result-square")
+    const area = areaSquare(input)
+
+     // Se utiliza fragment para evitar reflow 
+    const fragment = document.createDocumentFragment()
+    const p = document.createElement("p")
+    p.innerHTML += `<b>Área: </b><span>${area}</span>`
+
+    fragment.appendChild(p)
+    result.appendChild(fragment)
+    
+}
+
+// FIN CODIGO CUADRADO
+
+
+
+
 // CODIGO TRIANGULO
 const perimetroTriangulo = (b, l1, l2) => b + l1 + l2
 
@@ -12,23 +52,43 @@ function trianguloArea() {
     const ladoA = document.querySelector("#ladoA").value
     const ladoB = document.querySelector("#ladoB").value
     const ladoC = document.querySelector("#ladoC").value
+    const result = document.querySelector("#result-triangle")
+    
     const area = areaTriangulo(Number(ladoA), Number(ladoB), Number(ladoC))
-    return area   
+    
+    const fragment = document.createDocumentFragment()
+    const p = document.createElement("p")
+    p.innerHTML += `<b>Área: </b><span>${area}</span>` 
+
+    fragment.appendChild(p)
+    result.appendChild(fragment)
+
+       
 }
 
 function trianguloPerimetro () {
     const ladoA = document.querySelector("#ladoA").value
     const ladoB = document.querySelector("#ladoB").value
     const ladoC = document.querySelector("#ladoC").value
+    const result = document.querySelector("#result-triangle")
+    
     const perimetro = perimetroTriangulo(Number(ladoA), Number(ladoB), Number(ladoC))
-    return perimetro;
+    
+    const fragment = document.createDocumentFragment()
+    
+    const p = document.createElement("p")
+    p.innerHTML += `<b>Perimetro: </b><span>${perimetro}</span>`
+
+    fragment.appendChild(p)
+    result.appendChild(fragment)
+
+    
 }
 
 // FIN CODIGO TRIANGULO 
 
-// CODIGO CUADRADO
-const perimeterSquare = (sideSquare) => sideSquare * 4 
-const areaSquare = (sideSquare) => sideSquare * sideSquare
+
+
 
 
 // CIRCULOS 
@@ -36,41 +96,32 @@ const diameter = (ratio) => ratio * 2
 const perimeterCircule = (diameter) => diameter * Math.PI
 const areaCircule = (ratio) => ( Math.PI * (ratio * ratio) )
 
-// ---------------------------------------------------------------------------------------
-
-// Funciones Del Cuadrado
-
-function calcularPerimetro() {
-    const input = document.getElementById("ladoCuadrado").value
-    const perimeter = perimeterSquare(input)
-    return perimeter
-}
-
-function calcularArea() {
-    const input = document.getElementById("ladoCuadrado").value
-    const area = areaSquare(input)
-    alert(`El area del cuadrado es ${area}`)
-    return area
-}
-
-
-
-
-
-// Funciones del triangulo 
-
-
-// Funciones Circulo 
 
 function areaCirculo() {
     const radio = document.getElementById("radioCirculo").value
-    const diametro = diameter(radio)
-    const perimetro = perimeterCircule(diametro)
+    const result = document.getElementById("result-circle")
     const area = areaCircule(radio)
 
-    console.group("Resultados Circulo")
-    console.log(`El perimetro del circulo es: ${perimetro}`)
-    console.log(`El area del circulo es: ${area}`)
-    console.log(`El diametro del ciruclo es: ${diametro}`)
-    console.groupEnd()
+    const fragment = document.createDocumentFragment()
+    const p = document.createElement("p")
+    p.innerHTML += `<b>Área: </b><span>${area}</span>`
+
+    fragment.appendChild(p)
+    result.appendChild(fragment)
+    
+}
+
+function perimetroCirculo() {
+    const radio = document.getElementById("radioCirculo").value
+    const result = document.getElementById("result-circle")
+    const diametro = diameter(radio)
+    const perimetro = perimeterCircule(diametro)
+
+    const fragment = document.createDocumentFragment()
+    const p = document.createElement("p")
+    p.innerHTML += `<b>Perimetre:</b><span>${perimetro}</span>`
+
+    fragment.appendChild(p)
+    result.appendChild(fragment)
+
 }

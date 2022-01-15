@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Figuras Geometricas | Curso Practico</title>
 </head>
@@ -22,9 +23,12 @@
                 id="ladoCuadrado"
                 type="number"
             />
-            <button type="button" onclick="calcularPerimetro()">Calcular Perimetro!</button>
-            <button type="button" onclick="calcularArea()">Calcular Area!</button>
+            <button type="button" onclick="perimetroCuadrado()">Get Perimeter!</button>
+            <button type="button" onclick="areaCuadrado()">Get Area!</button>
         </form>
+        <div id="result-square">
+
+        </div>
     </section>
     <hr/>
     <section>
@@ -51,7 +55,10 @@
             />        
             <button type="button" onclick="trianguloArea()">Get Area!</button>          
             <button type="button" onclick="trianguloPerimetro()">Get Perimetro!</button>          
-        </form>   
+        </form>  
+        <div id="result-triangle">
+
+        </div> 
     </section>
     <hr/>
     <section>
@@ -66,8 +73,12 @@
                 id="radioCirculo"
                 type="number"
             />
-            <button type="button" onclick="areaCirculo()">Calcular Area!</button>
+            <button type="button" onclick="areaCirculo()">Get área!</button>
+            <button type="button" onclick="perimetroCirculo()">Get perimeter!</button>
         </form>
+        <div id="result-circle">
+
+        </div>
     </section>
     <hr>
     <script src="./figuras.js"></script>
