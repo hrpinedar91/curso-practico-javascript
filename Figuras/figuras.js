@@ -119,7 +119,7 @@ function perimetroCirculo() {
 
     const fragment = document.createDocumentFragment()
     const p = document.createElement("p")
-    p.innerHTML += `<b>Perimetre:</b><span>${perimetro}</span>`
+    p.innerHTML += `<b>Perimetre: </b><span>${perimetro}</span>`
 
     fragment.appendChild(p)
     result.appendChild(fragment)
