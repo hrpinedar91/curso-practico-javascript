@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">    
+    <title>Calculate Discount || Curso Practico JS</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__img" src="./assets/discount-svgrepo-com.svg" alt="logo discount">
+        <h1 class="header__title">Calcula el descuento de tus producto</h1>
+        <p class="header__paragraph">Practica del curso practico de JavaScript</p>
+    </header>
+    <div class="main">
+        <section class="main__section">
+            <form>
+                <labe for="priceProduct">
+                    Ingrese el <b>precio</b> de tu producto
+                </labe>
+                <input
+                    placeholder="Precio producto"
+                    id="priceProduct"
+                    type="number"
+                    class="form-control"                
+                />
+                <label for="discountProduct">
+                    Ingrese el <b>descuento</b> de tu producto
+                </label>
+                <input
+                    placeholder="Descuento producto"
+                    id="discountProduct"
+                    type="number"
+                    class="form-control"           
+                />
+                <label for="codeDiscount">
+                    Codigo cupon de descuento
+                </label>
+                <!-- <input
+                    placeholder="Codigo descuento"
+                    id="codeDiscount"
+                    type="text" 
+                    class="form-control"
+                /> -->
+
+                <select class="form-control" id="discount" onChange="updateSelect()">
+                    <option selected>Elija un cupon adicional</option>
+                    <option value=10>10% adicional</option>
+                    <option value=15>15% adicional</option>
+                    <option value=20>20% adicional</option>
+                </select>
+                <button id="btnDiscount" type="button" class="btn btn-dark btn-lg btn-block mt-3">Calcular Precio!</button>          
+            </form>
+            <div id="result">
+               
+            </div>
+        </section>
+    </div>
+    <script src="./discount.js"></script>
+</body>
+</html>
